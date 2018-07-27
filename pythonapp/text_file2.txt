@@ -1,0 +1,22 @@
+DELIMITER $$
+DROP PROCEDURE IF EXISTS sp_createUser $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
+    IN p_id VARCHAR(10),
+    IN p_name VARCHAR(20),
+    IN p_picName VARCHAR(40)
+)
+BEGIN
+    insert into user_list
+        (
+            user_id,
+            user_name,
+            user_pic_name
+        )
+        values
+        (
+            p_id,
+            p_name,
+            p_picName
+        );
+END$$
+DELIMITER ;

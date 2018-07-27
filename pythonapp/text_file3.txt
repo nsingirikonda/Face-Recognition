@@ -1,0 +1,8 @@
+DELIMITER $$
+DROP PROCEDURE IF EXISTS sp_fetchRows $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_fetchRows`(
+)
+BEGIN
+        SELECT * FROM user_list;
+END$$
+DELIMITER ;

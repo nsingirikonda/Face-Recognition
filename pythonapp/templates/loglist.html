@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Python Flask Bucket List App</title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/loglist.css" rel="stylesheet">
+ </head>
+<body>
+<div class="col-lg-3">
+</div>
+<div class="col-lg-6">
+  <table>
+  <tr>
+    <td>Name</td>
+    <td>Location</td>
+    <td>Time</td>
+  </tr>
+  {% for your_list_element in your_list %}
+  <tr>
+    <th>{{ your_list_element.user_name }}</th>
+    <th>{{ your_list_element.user_location }}</th> 
+    <th>{{ your_list_element.user_time }}</th>
+  </tr>
+  {% endfor %}  
+  </table>
+ </div> 
+</body>
+</html>
